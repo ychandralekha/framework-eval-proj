@@ -57,7 +57,7 @@ public class CustomerDaoImplementation implements ICustomerBank {
 			long days = 0;
 			long finalBalance = 0;
 			session = sessionFactory.openSession();
-			Query query = session.createQuery("from customer");
+			Query query = session.createQuery("from CustomerAccount");
 			List<CustomerAccount> customerAccounts = query.list();
 			List<TotalCustomerDetails> totalCustomerDetails = new ArrayList<TotalCustomerDetails>();
 			for (CustomerAccount account : customerAccounts) {
